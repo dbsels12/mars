@@ -84,7 +84,7 @@ section {
   height: 100vh;
   background: #1f212c;
   color: #fff;
-  z-index: 1000;
+  z-index: 10000;
   padding-top: 200px;
   display: none;
 }
@@ -514,6 +514,8 @@ section {
   top: 4px;
 }
 
+/* 풋터 */
+
 footer {
   padding: 42px 0 52px;
   background: #f5f5f5;
@@ -572,4 +574,229 @@ footer {
 
 .social a:hover {
   color: var(--gray-dark);
+}
+
+/* ================================
+================================
+     반응형 -미디어 쿼리
+================================
+================================ */
+
+@media (max-width: 1200px) {
+  .slide_text {
+    text-align: center;
+  }
+
+  .slide_text h2 {
+    margin: 0 auto;
+  }
+
+  .slide_text p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
+
+  .main_slide {
+    margin-bottom: 30px;
+  }
+
+  footer {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: initial;
+  }
+  .nav {
+    display: none;
+  }
+  .logo {
+    width: 160px;
+  }
+
+  .hamburger {
+    right: 16px;
+  }
+
+  .slide_text h2 {
+    font-size: 30px;
+    width: 76%;
+  }
+
+  .slide_text p {
+    display: none;
+  }
+
+  .btns {
+    margin-top: 60px;
+  }
+
+  .btn {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+  }
+
+  .arrow span {
+    width: 30px;
+  }
+
+  section {
+    padding: 20px 0;
+  }
+
+  .text_area {
+    margin-bottom: 16px;
+  }
+
+  /* 슬라이드 */
+  .slide_02 .slick-dots {
+    display: none !important;
+  }
+
+  .slide_02 .slide {
+    border-radius: 6px;
+  }
+
+  .slide_02 .slide h3 {
+    font-size: 18px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .view_all {
+    bottom: initial;
+    top: 4px;
+    font-size: 14px;
+  }
+
+  .section_02 .cards dl {
+    bottom: -38px;
+    left: 12px;
+  }
+
+  .section_02 .cards dl dt {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .section_02 .cards dl dd {
+    display: none;
+  }
+
+  .section_02 .cards .card:hover dl {
+    bottom: 20px;
+  }
+
+  .section_04 .daum_map {
+    height: 300px;
+  }
+
+  .slide_05 .view_all {
+    top: 12px;
+  }
+
+  .card {
+    border-radius: 6px;
+  }
+
+  .section_02 .cards,
+  .section_03 .cards,
+  .section_05 .cards {
+    grid-gap: 8px;
+  }
+
+  .section_05 .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* footer */
+  .footer_nav {
+    align-items: initial;
+    flex-direction: column;
+  }
+
+  .footer_menu {
+    margin-top: 30px;
+  }
+
+  .footer_menu li:first-child a {
+    margin-right: 0;
+  }
+
+  .social {
+    top: 4px;
+  }
+
+  .social a {
+    padding: 6px;
+  }
+
+  .footer_info {
+    line-height: 1.8;
+  }
+
+  /* 전체 메뉴 */
+  .menu {
+    overflow: auto;
+  }
+  .menu .close {
+    font-size: 30px;
+    flex-direction: column;
+    right: 30px;
+    top: 30px;
+  }
+  .menu_list {
+    flex-direction: column;
+    margin-bottom: 200px;
+  }
+
+  .menu_list > li > a {
+    padding: initial;
+    margin: initial;
+    padding: 16px 0;
+    font-size: 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .menu_list > li > a::before {
+    display: none;
+  }
+
+  .menu_list > li > a::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+  }
+
+  .menu_list ul li a {
+    padding: 20px 10px;
+  }
+
+  .menu_list ul {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .slide_text h2 {
+    font-size: 26px;
+    width: 80%;
+  }
 }
